@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Душанбе Текстиль</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- НАВИГАЦИЯ -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Душанбе<span>Текстиль</span></div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#catalog">Каталог</a></li>
+        <li><a href="#stats">Цифры</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Меню">&#9776;</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Производство с 1998 года</p>
+      <h1>Ткани высшего<br/>качества из<br/>Таджикистана</h1>
+      <p class="hero-sub">Поставляем ткани, нити и готовую продукцию по всей Центральной Азии</p>
+      <div class="hero-actions">
+        <a href="#catalog" class="btn-primary">Смотреть каталог</a>
+        <a href="#contact" class="btn-outline">Связаться</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="fabric-grid">
+        <div class="swatch s1"></div>
+        <div class="swatch s2"></div>
+        <div class="swatch s3"></div>
+        <div class="swatch s4"></div>
+        <div class="swatch s5"></div>
+        <div class="swatch s6"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- О НАС -->
+  <section class="about" id="about">
+    <div class="container">
+      <span class="section-label">О компании</span>
+      <h2>Мы производим ткани,<br/>которые служат десятилетиями</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="icon">🏭</div>
+          <h3>Собственное производство</h3>
+          <p>Полный цикл — от сырья до готового изделия на одном предприятии в Душанбе.</p>
+        </div>
+        <div class="about-card">
+          <div class="icon">✅</div>
+          <h3>Контроль качества</h3>
+          <p>Каждая партия проходит многоступенчатую проверку перед отправкой клиенту.</p>
+        </div>
+        <div class="about-card">
+          <div class="icon">🚚</div>
+          <h3>Быстрая доставка</h3>
+          <p>Доставляем по всему Таджикистану и странам СНГ в течение 3–7 дней.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КАТАЛОГ -->
+  <section class="catalog" id="catalog">
+    <div class="container">
+      <span class="section-label">Продукция</span>
+      <h2>Каталог товаров</h2>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="fabrics">Ткани</button>
+        <button class="filter-btn" data-filter="threads">Нити</button>
+        <button class="filter-btn" data-filter="ready">Готовые изделия</button>
+      </div>
+      <div class="catalog-grid" id="catalogGrid">
+        <div class="product-card" data-category="fabrics">
+          <div class="product-img" style="background:#C8A882;"></div>
+          <div class="product-info">
+            <span class="product-tag">Ткани</span>
+            <h4>Хлопок натуральный</h4>
+            <p>Ширина 150 см, плотность 180 г/м²</p>
+            <button class="btn-order" onclick="openModal('Хлопок натуральный')">Заказать</button>
+          </div>
+        </div>
+        <div class="product-card" data-category="fabrics">
+          <div class="product-img" style="background:#7B9EA6;"></div>
+          <div class="product-info">
+            <span class="product-tag">Ткани</span>
+            <h4>Лён премиум</h4>
+            <p>Ширина 140 см, плотность 210 г/м²</p>
+            <button class="btn-order" onclick="openModal('Лён премиум')">Заказать</button>
+          </div>
+        </div>
+        <div class="product-card" data-category="fabrics">
+          <div class="product-img" style="background:#D4956A;"></div>
+          <div class="product-info">
+            <span class="product-tag">Ткани</span>
+            <h4>Шёлк таджикский</h4>
+            <p>Ширина 120 см, ручное производство</p>
+            <button class="btn-order" onclick="openModal('Шёлк таджикский')">Заказать</button>
+          </div>
+        </div>
+        <div class="product-card" data-category="threads">
+          <div class="product-img" style="background:#8E7BAE;"></div>
+          <div class="product-info">
+            <span class="product-tag">Нити</span>
+            <h4>Нить хлопковая №40</h4>
+            <p>Бобина 5000м, 24 цвета</p>
+            <button class="btn-order" onclick="openModal('Нить хлопковая №40')">Заказать</button>
+          </div>
+        </div>
+        <div class="product-card" data-category="threads">
+          <div class="product-img" style="background:#A8C5A0;"></div>
+          <div class="product-info">
+            <span class="product-tag">Нити</span>
+            <h4>Нить полиэстер №60</h4>
+            <p>Бобина 10000м, 48 цветов</p>
+            <button class="btn-order" onclick="openModal('Нить полиэстер №60')">Заказать</button>
+          </div>
+        </div>
+        <div class="product-card" data-category="ready">
+          <div class="product-img" style="background:#E8C5A0;"></div>
+          <div class="product-info">
+            <span class="product-tag">Готовые изделия</span>
+            <h4>Постельное бельё</h4>
+            <p>Комплект 100% хлопок, размеры: 1.5, 2.0, Евро</p>
+            <button class="btn-order" onclick="openModal('Постельное бельё')">Заказать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ЦИФРЫ -->
+  <section class="stats" id="stats">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="25">0</span><span class="stat-unit">лет</span>
+        <p>на рынке</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="300">0</span><span class="stat-unit">+</span>
+        <p>клиентов по СНГ</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="50">0</span><span class="stat-unit">+</span>
+        <p>видов продукции</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="12">0</span><span class="stat-unit">стран</span>
+        <p>поставки</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ -->
+  <section class="contact" id="contact">
+    <div class="container contact-wrap">
+      <div class="contact-info">
+        <span class="section-label">Контакты</span>
+        <h2>Оставьте заявку — мы перезвоним</h2>
+        <p>📍 г. Душанбе, ул. Промышленная, 14</p>
+        <p>📞 +992 37 123 45 67</p>
+        <p>✉️ info@dushanbe-textile.tj</p>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <input type="text" id="name" placeholder="Ваше имя" required />
+        <span class="error-msg" id="nameError"></span>
+        <input type="tel" id="phone" placeholder="Номер телефона" required />
+        <span class="error-msg" id="phoneError"></span>
+        <textarea id="message" placeholder="Ваш вопрос или заказ" rows="4"></textarea>
+        <button type="submit" class="btn-primary">Отправить заявку</button>
+        <p class="success-msg" id="successMsg">✅ Заявка отправлена! Мы свяжемся с вами.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Душанбе Текстиль. Все права защищены.</p>
+  </footer>
+
+  <!-- МОДАЛЬНОЕ ОКНО -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <h3>Заказать товар</h3>
+      <p id="modalProduct"></p>
+      <input type="text" placeholder="Ваше имя" id="modalName"/>
+      <input type="tel" placeholder="Телефон" id="modalPhone"/>
+      <button class="btn-primary" onclick="submitModal()">Отправить заявку</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
