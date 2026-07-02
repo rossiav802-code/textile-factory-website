@@ -38,6 +38,5 @@ git clone https://github.com/rossiav802-code/textile-factory-website.git
 
 ## 👤 Author
 
-**Aslan Oymahmadov**
 - GitHub: [@rossiav802-code](https://github.com/rossiav802-code)
 - Email: rossiav802@gmail.com
